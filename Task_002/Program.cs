@@ -5,10 +5,25 @@
 
 System.Console.WriteLine("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
-if (num / 100 > 0)
+int reversNum = 0;
+while (num > 99)
 {
-   int resalt = num % 10;
+    int digit = num % 10;
+    reversNum = reversNum * 10 + digit;
+    num /= 10;
+   
+}
+// System.Console.WriteLine(reversNum);
+
+if (reversNum / 10 > 0)
+{
+   int resalt = reversNum % 10;
    System.Console.WriteLine(resalt); 
+}
+else if (num / 100 > 0)
+{
+    int resalt = num % 10;
+    System.Console.WriteLine(resalt);
 }
 else
 {
